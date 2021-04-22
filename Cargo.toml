@@ -1,6 +1,6 @@
 [package]
 name = "libalgobsec-sys"
-version = "0.0.1+1.4.8.0"
+version = "0.0.2+1.4.8.0"
 authors = ["Jan Gosmann <jan@hyper-world.de>"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
