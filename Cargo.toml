@@ -3,6 +3,12 @@ name = "libalgobsec-sys"
 version = "0.1.0+1.4.8.0"
 authors = ["Jan Gosmann <jan@hyper-world.de>"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+description = "Unsafe bindings to the Bosch BSEC library"
+repository = "https://github.com/jgosmann/libalgobsec-sys"
+keywords = ["BSEC", "bindings"]
+categories = ["embedded", "external-ffi-bindings"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
