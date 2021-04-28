@@ -33,3 +33,8 @@ rustflags = [
     '--cfg', 'bsec_library_path="/path/to/BSEC_1.4.8.0_Generic_Release/algo/normal_version/bin/target-arch"',
 ]
 ```
+
+## Building local BSEC documentation
+
+If you build the documentation locally with `cargo doc`, after the above setup,
+BSEC documentation extracted from the header files will be included.
