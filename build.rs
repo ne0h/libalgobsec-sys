@@ -42,6 +42,8 @@ fn main() {
                 .to_str()
                 .unwrap(),
         )
+        .use_core()
+        .ctypes_prefix("cty")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate()
         .expect("Unable to generate BSEC bindings.");
