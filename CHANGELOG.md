@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 * Minimum version of bindgen bumped to 0.63.0 to allow building with `cross`.
+* Set minimum required Rust version to 1.54.
 
 
 ## [0.2.0] - 2021-04-30
