@@ -34,6 +34,37 @@ rustflags = [
 ]
 ```
 
+### Cross-compilation with cross
+
+You need to ensure that all BSEC dependencies are installed in the container
+image used for the build. For example:
+
+```toml
+# Cross.toml
+[target.arm-unknown-linux-gnueabihf]
+pre-build = ["apt-get update && apt-get install --assume-yes libffi-dev"]
+```
+
+In `.cargo/config` you need to configure the path to BSEC within the container:
+
+```toml
+[build]
+rustflags = [
+    '--cfg', 'bsec_include_path="/bsec/algo/normal_version/inc"',
+    '--cfg', 'bsec_library_path="/bsec/algo/normal_version/bin/target-arch"',
+]
+```
+
+If you have BSEC not included in the container image,
+you can mount it from your host system,
+when you invoke cross.
+For example:
+
+```shell
+DOCKER_OPTS='-v /path/to/BSEC_1.4.8.0_Generic_Release:/bsec' cross build --target=arm-unknown-linux-gnueabihf
+
+```
+
 ## Building local BSEC documentation
 
 If you build the documentation locally with `cargo doc`, after the above setup,
