@@ -11,7 +11,7 @@ adhering to that license in your products despite the source code of this crate
 to generate the necessary bindings is published under a permissive license.
 
 Note that the source code of this crate does not contain any of the BSEC source
-code, API declartions, or documentation.
+code, API declarations, or documentation.
 
 * [BSEC website to obtain your copy](https://www.bosch-sensortec.com/software-tools/software/bsec/)
 * [BSEC license terms at the time of writing](https://www.bosch-sensortec.com/media/boschsensortec/downloads/bsec/2017-07-17_clickthrough_license_terms_environmentalib_sw_clean.pdf)
