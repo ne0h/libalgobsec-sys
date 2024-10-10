@@ -1,10 +1,11 @@
 extern crate bindgen;
 
 use std::env;
+use std::path::absolute;
 use std::path::PathBuf;
 
 static MISSING_PATH_CONFIG_MSG: &str =
-    "The `bsec_include_path` configuration option must be set to the absolute \
+    "The `bsec_include_path` configuration option must be set to the \
 path of the BSEC header files. You can do that by creating a \
 `.cargo/config` file in your crate with the following content:
 
@@ -37,8 +38,8 @@ fn main() {
 
     let bindings = bindgen::Builder::default()
         .header(
-            PathBuf::from(bsec_include_path)
-                .join("bsec_interface.h")
+            absolute(PathBuf::from(bsec_include_path).join("bsec_interface.h"))
+                .unwrap()
                 .to_str()
                 .unwrap(),
         )
